@@ -1,0 +1,38 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/template/template.xhtml">
+
+	<ui:define name="pageTitle">Add Event</ui:define>
+	<ui:define name="pageContent">
+		<h:form>
+			<h:panelGrid columns="2" border="1">
+				<h:outputText value="EventAffiche" />
+				<h:inputText value="#{eventBean.evt.eventAffiche}" />
+				<h:outputText value="EventDesc" />
+				<h:inputTextarea value="#{eventBean.evt.eventDescription}" />
+				<h:outputText value="EventPlace" />
+				<h:inputText value="#{eventBean.evt.eventPlace}" />
+				<h:outputText value="EventTitle" />
+				<h:inputText value="#{eventBean.evt.eventTitle}" />
+				<h:outputText value="EventDate" />
+				<h:inputText value="#{eventBean.evt.eventDate}" >
+				
+				<f:convertDateTime pattern="dd/mm/yyyy"/>
+				</h:inputText>
+							
+				
+				
+				
+				<h:outputText value="EventTitle" />
+
+
+				<h:commandButton value="add" action="#{eventBean.addEvent()}" />
+
+			</h:panelGrid>
+		</h:form>
+
+
+	</ui:define>
+</ui:composition>

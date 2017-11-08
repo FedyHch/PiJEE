@@ -1,0 +1,51 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/template/template.xhtml">
+
+
+	<ui:define name="pageTitle">ListEvent</ui:define>
+	<ui:define name="pageContent">
+		<h:form>
+			<h:dataTable value="#{eventBean.allEv}" var="e" border="1">
+				<f:facet name="header">All Events</f:facet>
+				<h:column>
+					<f:facet name="header">Id</f:facet>
+					<h:outputText value="#{e.eventId}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">title</f:facet>
+					<h:outputText value="#{e.eventTitle}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">Description</f:facet>
+					<h:outputText value="#{e.eventDescription}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">date</f:facet>
+					<h:outputText value="#{e.eventDate}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">place</f:facet>
+					<h:outputText value="#{e.eventPlace}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">affiche</f:facet>
+					<h:outputText value="#{e.eventAffiche}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">Outils</f:facet>
+					<h:commandButton value="Edit"
+						action="#{eventBean.updateEventInit(e)}" />
+					<h:commandButton action="#{eventBean.deleteEvent(e)}"
+						value="Delete" />
+				</h:column>
+			</h:dataTable>
+		</h:form>
+		<iframe width="600" height="450" frameborder="0"
+			src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA9Oi77AlVeudYlLdhGxbVuc-koA30OlTE
+    &q=Space+Needle,Seattle+WA"> </iframe>
+
+	</ui:define>
+</ui:composition>
