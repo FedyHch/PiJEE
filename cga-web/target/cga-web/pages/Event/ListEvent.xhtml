@@ -7,8 +7,14 @@
 
 	<ui:define name="pageTitle">ListEvent</ui:define>
 	<ui:define name="pageContent">
+	<h:form>
+	<h:inputText value="#{eventBean.searchName}" />
+	<h:commandButton action="#{eventBean.doSearchByName()}" styleClass="btn" value="Search" />
+	</h:form>
+	
 		<h:form>
-			<h:dataTable value="#{eventBean.allEv}" var="e" border="1">
+		<h:commandButton styleClass="btn" action="#{eventBean.backToAdd()}" value="Add" />
+			<h:dataTable styleClass="blueTable" value="#{eventBean.allEv}" var="e" border="1">
 				<f:facet name="header">All Events</f:facet>
 				<h:column>
 					<f:facet name="header">Id</f:facet>
@@ -31,21 +37,26 @@
 					<h:outputText value="#{e.eventPlace}" />
 				</h:column>
 				<h:column>
-					<f:facet name="header">affiche</f:facet>
-					<h:outputText value="#{e.eventAffiche}" />
+					<f:facet name="header">theme</f:facet>
+					<h:outputText value="#{e.eventTheme}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">Participants number</f:facet>
+					<h:outputText value="#{e.lstInsured.size()}" />
 				</h:column>
 				<h:column>
 					<f:facet name="header">Outils</f:facet>
-					<h:commandButton value="Edit"
+					<h:commandButton styleClass="btn" value="Edit"
 						action="#{eventBean.updateEventInit(e)}" />
-					<h:commandButton action="#{eventBean.deleteEvent(e)}"
+					<h:commandButton styleClass="btn" action="#{eventBean.deleteEvent(e)}"
 						value="Delete" />
+						<h:commandButton styleClass="btn" action="#{eventBean.goToListParticipants(e)}"
+						value="View List Participants" />
 				</h:column>
 			</h:dataTable>
 		</h:form>
-		<iframe width="600" height="450" frameborder="0"
-			src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA9Oi77AlVeudYlLdhGxbVuc-koA30OlTE
-    &q=Space+Needle,Seattle+WA";> </iframe>
+		
+		
 
 	</ui:define>
 </ui:composition>

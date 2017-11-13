@@ -1,0 +1,36 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/template/template.xhtml">
+
+
+	<ui:define name="pageTitle">List Tow</ui:define>
+	<ui:define name="pageContent">
+		<h:form>
+			<h:dataTable value="#{insuranceTowBean.towInsuredAccepted}" var="t" border="1">
+				<f:facet name="header">All Tows</f:facet>
+				<h:column>
+					<f:facet name="header">Id</f:facet>
+					<h:outputText value="#{t.tow_id}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">Date Tow</f:facet>
+					<h:outputText value="#{t.date_tow}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">Status</f:facet>
+					<h:outputText value="#{t.status}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">Zone</f:facet>
+					<h:outputText value="#{t.zone}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">Outils</f:facet>
+<!-- 					<h:commandButton value="Demande" action="#{insuranceTowBean.request(t)}" /> -->
+				</h:column>
+			</h:dataTable>
+		</h:form>
+	</ui:define>
+</ui:composition>

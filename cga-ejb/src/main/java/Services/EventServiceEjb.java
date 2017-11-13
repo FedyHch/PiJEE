@@ -29,7 +29,7 @@ public class EventServiceEjb implements EventServiceEjbRemote,EventServiceEjbLoc
 
 	@Override
 	public void addEvent(Event e) {
-		em.persist(e);
+		em.persist(em.merge(e));
 		
 	}
 
@@ -72,6 +72,18 @@ public class EventServiceEjb implements EventServiceEjbRemote,EventServiceEjbLoc
 
 		em.persist(em.merge(a));
 		
+	}
+
+	@Override
+	public void addInsured(Insured i) {
+		em.persist(em.merge(i));
+		
+	}
+
+	@Override
+	public List<Event> findEventByTitle(String title) {
+		
+		return em.createQuery("select e from Event e where e.EventTitle like ?1",Event.class).setParameter(1,"%"+title+"%").getResultList();
 	}
 	
 

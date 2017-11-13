@@ -23,11 +23,11 @@ public class Event implements Serializable {
 	private String EventPlace;
 	private String EventTitle;
 	private String EventDescription;
-	private String EventAffiche;
+	private String EventTheme;
 	
 	@ManyToOne
 	private InsuranceAgent agentEvent;
-	@ManyToMany(mappedBy="listEvent")
+	@ManyToMany(mappedBy="listEvent",cascade={CascadeType.ALL},fetch=FetchType.EAGER)
 	private List<Insured> lstInsured;
 	
 	private static final long serialVersionUID = 1L;
@@ -70,13 +70,6 @@ public class Event implements Serializable {
 	public void setEventDescription(String EventDescription) {
 		this.EventDescription = EventDescription;
 	}   
-	public String getEventAffiche() {
-		return this.EventAffiche;
-	}
-
-	public void setEventAffiche(String EventAffiche) {
-		this.EventAffiche = EventAffiche;
-	}
 	public InsuranceAgent getAgentEvent() {
 		return agentEvent;
 	}
@@ -88,6 +81,12 @@ public class Event implements Serializable {
 	}
 	public void setLstInsured(List<Insured> lstInsured) {
 		this.lstInsured = lstInsured;
+	}
+	public String getEventTheme() {
+		return EventTheme;
+	}
+	public void setEventTheme(String eventTheme) {
+		EventTheme = eventTheme;
 	}
    
 }

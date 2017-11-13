@@ -4,13 +4,16 @@ C:\Users\Laser\workspace\cga\cga-ejb\src\main\java\Entitys\Admin.java
 C:\Users\Laser\workspace\cga\cga-ejb\src\main\java\Entitys\Complaint.java
 C:\Users\Laser\workspace\cga\cga-ejb\src\main\java\Entitys\InsuranecPolicy.java
 C:\Users\Laser\workspace\cga\cga-ejb\src\main\java\Entitys\User.java
+C:\Users\Laser\workspace\cga\cga-ejb\src\main\java\Services\TowServiceEjbRemote.java
 C:\Users\Laser\workspace\cga\cga-ejb\src\main\java\Entitys\Contract.java
+C:\Users\Laser\workspace\cga\cga-ejb\src\main\java\Services\TowServiceEjb.java
 C:\Users\Laser\workspace\cga\cga-ejb\src\main\java\Entitys\Post.java
 C:\Users\Laser\workspace\cga\cga-ejb\src\main\java\Entitys\Insured.java
 C:\Users\Laser\workspace\cga\cga-ejb\src\main\java\Entitys\Event.java
 C:\Users\Laser\workspace\cga\cga-ejb\src\main\java\Entitys\Expert.java
 C:\Users\Laser\workspace\cga\cga-ejb\src\main\java\Entitys\Subject.java
 C:\Users\Laser\workspace\cga\cga-ejb\src\main\java\Services\EventServiceEjbRemote.java
+C:\Users\Laser\workspace\cga\cga-ejb\src\main\java\Services\TowServiceEjbLocal.java
 C:\Users\Laser\workspace\cga\cga-ejb\src\main\java\Entitys\Vehicule.java
 C:\Users\Laser\workspace\cga\cga-ejb\src\main\java\Services\EventServiceEjb.java
 C:\Users\Laser\workspace\cga\cga-ejb\src\main\java\Entitys\Claim.java

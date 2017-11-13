@@ -18,5 +18,6 @@ public interface EventServiceEjbRemote {
 	public List<Event> getAllEvents();
 	public List<Insured> getAllParticipants(Event e);
 	public void addAgent(InsuranceAgent a);
-	
+	public void addInsured(Insured i);
+	public List<Event> findEventByTitle(String title);
 }

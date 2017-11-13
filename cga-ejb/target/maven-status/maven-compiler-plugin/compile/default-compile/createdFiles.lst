@@ -3,12 +3,15 @@ Services\EventServiceEjb.class
 Entitys\Vehicule.class
 Entitys\Admin.class
 Services\EventServiceEjbLocal.class
+Services\TowServiceEjbRemote.class
 Entitys\Insured.class
 Entitys\Tow.class
 Services\EventServiceEjbRemote.class
 Entitys\Contract.class
 Entitys\Event.class
+Services\TowServiceEjbLocal.class
 Entitys\InsuranceAgent.class
+Services\TowServiceEjb.class
 Entitys\User.class
 Entitys\Complaint.class
 Entitys\Expert.class
