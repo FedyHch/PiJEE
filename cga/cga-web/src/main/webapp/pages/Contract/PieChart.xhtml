@@ -1,0 +1,17 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/template/template2.xhtml">
+        <ui:define name="pageContent">
+<center>
+<h:panelGrid rows="2" rowClasses="top,bottom" style="width:100%">
+
+<p:chart  type="pie" model="#{chartView.pieModel1}" style="width:400px;height:300px" />
+             
+
+</h:panelGrid>
+</center>
+</ui:define>
+</ui:composition>
