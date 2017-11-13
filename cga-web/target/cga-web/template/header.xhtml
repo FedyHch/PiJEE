@@ -1,0 +1,24 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+	<!-- Animate.css -->
+		<header>
+			<div class="container text-center">
+				<div class="fh5co-navbar-brand">
+					<a class="fh5co-logo" href="index.html">Insurance Management</a>
+				</div>
+				<nav id="fh5co-main-nav" role="navigation">
+					<ul><h:form>
+						<li><h:commandLink action="/pages/Event/ListEventFront?face-redirect=true" value="Event Fo" /> </li>
+						<li><h:commandLink action="/pages/Event/ListEvent?faces-redirect=true" value="Event Bo" /></li>
+						<li><h:commandLink action="/pages/Tow/ListTow?faces-redirect=true" value="Tow Services" /></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="contact.html">Contact</a></li>
+						</h:form>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+</ui:composition>

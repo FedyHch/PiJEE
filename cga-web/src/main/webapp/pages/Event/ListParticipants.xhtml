@@ -1,0 +1,35 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="/template/template.xhtml">
+                	
+			<ui:define name="pageTitle">Participants for <h:outputText value="#{eventBean.evt.eventTitle}" /> </ui:define>		
+			<ui:define name="pageContent">
+			
+			<h:dataTable styleClass="blueTable" value="#{eventBean.listParticipants}" var="i" border="0">
+			<f:facet name="header">Participants for <h:outputText value="#{eventBean.evt.eventTitle}"/></f:facet>
+			<h:column>
+					<f:facet name="header">Cin</f:facet>
+					<h:outputText value="#{i.cin}" />
+			</h:column>
+			<h:column>
+					<f:facet name="header">First Name</f:facet>
+					<h:outputText value="#{i.first_name}" />
+			</h:column>
+			<h:column>
+					<f:facet name="header">Last Name</f:facet>
+					<h:outputText value="#{i.last_name}" />
+			</h:column>
+			<h:column>
+					<f:facet name="header">e-mail</f:facet>
+					<h:outputText value="#{i.e_mail}" />
+			</h:column>
+			
+			
+			
+			</h:dataTable>
+			
+			
+			</ui:define>
+</ui:composition>

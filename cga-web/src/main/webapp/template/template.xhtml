@@ -1,0 +1,42 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+	<h:head>
+		<title><ui:insert name="pageTitle" /></title>
+		<h:outputStylesheet library="css" name="animate.css" />
+		<!-- Icomoon Icon Fonts-->
+		<h:outputStylesheet library="css" name="icomoon.css" />
+		<!-- Bootstrap  -->
+		<h:outputStylesheet library="css" name="bootstrap.css" />
+		<!-- Owl Carousel -->
+		<h:outputStylesheet library="css" name="owl.carousel.min.css" />
+		<h:outputStylesheet library="css" name="owl.theme.default.min.css" />
+		<h:outputStylesheet library="css" name="style.css" />
+		<script src="#{request.contextPath}/resourses/js/jquery.waypoints.min.js"></script>
+
+		<script src="#{request.contextPath}/resourses/js/owl.carousel.min.js"></script>
+
+		<script src="#{request.contextPath}/resourses/js/jquery.stellar.min.js"></script>
+
+		<script src="#{request.contextPath}/resourses/js/main.js"></script>
+
+		<script src="#{request.contextPath}/resourses/js/jquery.min.js"></script>
+
+		<script src="#{request.contextPath}/resourses/js/jquery.easing.1.3.js"></script>
+
+		<script src="#{request.contextPath}/resourses/js/bootstrap.min.js"></script>
+		<script src="#{request.contextPath}/resourses/js/modernizr-2.6.2.min.js"></script>
+		</h:head>
+		<h:body>
+		<ui:include src="header.xhtml" />
+		<div class="container text-center">
+		<ui:insert name="pageContent" />
+		</div>
+		<div><ui:include src="footer.xhtml" /></div>
+		</h:body>
+		
+		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+		<link rel="shortcut icon" href="#{request.contextPath}/resources/img/favicon.ico" />
+
+</ui:composition>

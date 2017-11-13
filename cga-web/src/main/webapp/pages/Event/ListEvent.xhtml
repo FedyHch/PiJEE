@@ -1,0 +1,62 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/template/template.xhtml">
+
+
+	<ui:define name="pageTitle">ListEvent</ui:define>
+	<ui:define name="pageContent">
+	<h:form>
+	<h:inputText value="#{eventBean.searchName}" />
+	<h:commandButton action="#{eventBean.doSearchByName()}" styleClass="btn" value="Search" />
+	</h:form>
+	
+		<h:form>
+		<h:commandButton styleClass="btn" action="#{eventBean.backToAdd()}" value="Add" />
+			<h:dataTable styleClass="blueTable" value="#{eventBean.allEv}" var="e" border="1">
+				<f:facet name="header">All Events</f:facet>
+				<h:column>
+					<f:facet name="header">Id</f:facet>
+					<h:outputText value="#{e.eventId}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">title</f:facet>
+					<h:outputText value="#{e.eventTitle}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">Description</f:facet>
+					<h:outputText value="#{e.eventDescription}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">date</f:facet>
+					<h:outputText value="#{e.eventDate}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">place</f:facet>
+					<h:outputText value="#{e.eventPlace}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">theme</f:facet>
+					<h:outputText value="#{e.eventTheme}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">Participants number</f:facet>
+					<h:outputText value="#{e.lstInsured.size()}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">Outils</f:facet>
+					<h:commandButton styleClass="btn" value="Edit"
+						action="#{eventBean.updateEventInit(e)}" />
+					<h:commandButton styleClass="btn" action="#{eventBean.deleteEvent(e)}"
+						value="Delete" />
+						<h:commandButton styleClass="btn" action="#{eventBean.goToListParticipants(e)}"
+						value="View List Participants" />
+				</h:column>
+			</h:dataTable>
+		</h:form>
+		
+		
+
+	</ui:define>
+</ui:composition>

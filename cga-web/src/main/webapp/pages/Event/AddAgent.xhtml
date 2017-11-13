@@ -1,0 +1,22 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="/template/template.xhtml">
+                	
+			<ui:define name="pageTitle"></ui:define>		
+			<ui:define name="pageContent">
+			<h:form>
+			<h:outputText value="AgentCin" />
+			<h:inputText value="#{eventBean.a.cin}" />
+			<h:outputText value="first name" />
+			<h:inputText value="#{eventBean.a.first_name}" />
+			<h:outputText value="last name" />
+			<h:inputText value="#{eventBean.a.last_name}" />
+			<h:commandButton styleClass="btn" value="add" action="#{eventBean.init()}"/>
+			
+			</h:form>
+			
+			
+			</ui:define>
+</ui:composition>

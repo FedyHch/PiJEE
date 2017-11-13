@@ -1,0 +1,48 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="/template/template.xhtml">
+                	
+			<ui:define name="pageTitle">Update Event</ui:define>		
+			<ui:define name="pageContent">
+			
+			<h:form>
+			<h:outputLabel value="#{eventBean.evt.eventId}"/>
+			<h:panelGrid columns="3" border="0">
+			
+			<h3>Event Title</h3>
+				<h:inputText id="title" styleClass="form-control" value="#{eventBean.evt.eventTitle}" required="true" requiredMessage="title is required">
+				<f:ajax event="blur" execute="@this" render="msg_title" />
+				</h:inputText>
+				<h:message id="msg_title" for="title" styleClass="error"/>
+				<h3>Event Description</h3>
+				<h:inputTextarea styleClass="form-control" value="#{eventBean.evt.eventDescription}" required="true"/>
+				<h:message />
+				<h3>Event Place</h3>
+				<h:inputText styleClass="form-control" value="#{eventBean.evt.eventPlace}" required="true"/>
+				<h:message />
+				<h3>Event Theme</h3>
+				<h:inputText styleClass="form-control" value="#{eventBean.evt.eventTheme}" required="true"/>
+				<h:message />
+				<h3>Event Date</h3>
+				<h:inputText id="datemsg" styleClass="form-control" value="#{eventBean.evt.eventDate}" required="true" converterMessage="Example: 17/12/2010">
+
+					<f:convertDateTime pattern="dd/MM/yyyy" />
+					<f:ajax event="blur" execute="@this" render="msg_date" />
+				</h:inputText>
+				<h:message id="msg_date" for="datemsg" styleClass="error"/>
+				
+				<h:outputText value="" />
+				
+			
+			
+			
+			<h:commandButton styleClass="btn" value="Update" action="#{eventBean.UpdateEvent()}"/>
+			<h:commandButton styleClass="btn" action="#{eventBean.doBackToListEvent()}" value="Cancel" immediate="true" />
+			
+			</h:panelGrid>
+			</h:form>
+			
+			</ui:define>
+</ui:composition>

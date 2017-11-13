@@ -1,0 +1,56 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="/template/template.xhtml">
+                	
+			<ui:define name="pageTitle">Details de <h:outputText value="#{eventBean.evt.eventTitle}"/></ui:define>		
+			<ui:define name="pageContent">
+			
+			
+			<div class="col-md-4 animate-box fadeInUp animated">
+					<h3>Title : <h:outputText value="#{eventBean.evt.eventTitle}" /></h3>
+					<ul class="contact-info">
+						
+						
+						<li>
+						
+						<div class="form-group">Description : <textarea name="" class="form-control" id="" cols="30" rows="7" placeholder="Message" readonly="readonly"><h:outputText value="#{eventBean.evt.eventDescription}" /></textarea>
+							</div>
+							
+						
+						
+						
+						
+						
+						</li>
+						<li>Theme : <h:outputText value="#{eventBean.evt.eventTheme}" /></li>
+						<li>Date : <h:outputText value="#{eventBean.evt.eventDate}" /></li>
+						<li>Place : <h:outputText value="#{eventBean.evt.eventPlace}" /></li>
+					</ul>
+				</div>
+			
+			
+			
+			
+			
+			<h:panelGrid columns="3">
+			
+			<iframe width="300" height="225" frameborder="0" style="border: 0"
+			src="#{eventBean.convertPlace()}" allowfullscreen="true"> </iframe>
+			<h:panelGrid columns="1">
+			<h:form>
+			<h:outputText value="Directions to this Location from : " />
+			<h:inputText value="#{eventBean.source}" required="true"/>
+			
+			<h:commandLink value="here" action="#{eventBean.goToDestination()}"/>
+			</h:form>
+			<h:form>
+			<h:commandButton styleClass="btn" action="#{eventBean.doJoinEvent()}" value="Join Event !" />
+			</h:form>
+			<h:outputText rendered="#{eventBean.joined}" value="Done you have joined #{eventBean.evt.eventTitle}" />
+			<h:outputText rendered="#{eventBean.impossible}" value="You have already joined this Event" />
+			</h:panelGrid>
+			</h:panelGrid>
+			</ui:define>
+</ui:composition>

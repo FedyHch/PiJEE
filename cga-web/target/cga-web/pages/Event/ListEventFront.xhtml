@@ -1,0 +1,40 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="/template/template.xhtml">
+                	
+			<ui:define name="pageTitle"></ui:define>		
+			<ui:define name="pageContent">
+			<h:form>
+			<h:dataTable styleClass="blueTable" value="#{eventBean.allEv}" var="e" border="0">
+				<f:facet name="header">All Events</f:facet>
+				<h:column>
+					<f:facet name="header">Title</f:facet>
+					<h:outputText value="#{e.eventTitle}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">Description</f:facet>
+					<h:outputText value="#{e.eventDescription}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">Date</f:facet>
+					<h:outputText value="#{e.eventDate}" />
+				</h:column>
+				<h:column>
+				<f:facet name="header">Map</f:facet>
+				<iframe width="300" height="225" frameborder="0" style="border: 0"
+			     src="#{eventBean.getEventMapPlace(e)}" allowfullscreen="true"> </iframe>
+				</h:column>
+				
+				<h:column>
+				<f:facet name="header">Plus</f:facet>
+				<h:commandButton styleClass="btn" action="#{eventBean.goToDetails(e)}" value="Details" />
+				</h:column>
+				</h:dataTable>
+				</h:form>
+				
+			
+			
+			</ui:define>
+</ui:composition>
