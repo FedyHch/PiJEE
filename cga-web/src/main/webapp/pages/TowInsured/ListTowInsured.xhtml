@@ -7,8 +7,11 @@
 
 	<ui:define name="pageTitle">List Tow</ui:define>
 	<ui:define name="pageContent">
+	<h:form>
+			<h:commandLink action="/pages/TowInsured/ListTowInsuredAccepted?faces-redirect=true" value="List Tow Accepted" />
+		</h:form>
 		<h:form>
-			<h:dataTable value="#{insuranceTowBean.allNotReservedTow}" var="t" border="1">
+			<h:dataTable styleClass="blueTable" value="#{insuranceTowBean.allNotReservedTow}" var="t" border="1">
 				<f:facet name="header">All Tows</f:facet>
 				<h:column>
 					<f:facet name="header">Id</f:facet>
@@ -28,7 +31,7 @@
 				</h:column>
 				<h:column>
 					<f:facet name="header">Outils</f:facet>
-					<h:commandButton value="Demande" action="#{insuranceTowBean.request(t)}" />
+					<h:commandButton styleClass="btn-primary" value="Demande" action="#{insuranceTowBean.request(t)}" />
 				</h:column>
 			</h:dataTable>
 		</h:form>

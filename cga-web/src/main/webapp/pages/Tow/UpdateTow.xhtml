@@ -13,7 +13,7 @@
 
 				<h:outputText value="Date tow" />
 				<h:inputText id="dateT" value="#{towBean.tow.date_tow}"
-					converterMessage="Example: 17/12/2010">
+					converterMessage="Example: 17/12/2010" styleClass="form-control" >
 					<f:convertDateTime pattern="dd/MM/yyyy" />
 					<f:ajax event="blur" execute="@this" render="msg_dateTow" />
 				</h:inputText>
@@ -21,20 +21,20 @@
 
 				<h:outputText value="Status" />
 				<h:inputText id="status" value="#{towBean.tow.status}"
-					required="true" requiredMessage="status is required">
+					required="true" requiredMessage="status is required" styleClass="form-control">
 					<f:ajax event="blur" execute="@this" render="msg_status" />
 				</h:inputText>
 				<h:message id="msg_status" for="status" styleClass="error" />
 
 				<h:outputText value="Zone" />
 				<h:inputText id="zone" value="#{towBean.tow.zone}" required="true"
-					requiredMessage="zone is required">
+					requiredMessage="zone is required" styleClass="form-control">
 					<f:ajax event="blur" execute="@this" render="msg_zone" />
 				</h:inputText>
 				<h:message id="msg_zone" for="zone" styleClass="error" />
 
-				<h:commandButton value="Update" action="#{towBean.UpdateTow()}" />
-				<h:commandButton action="#{towBean.doCancel()}" value="Cancel" />
+				<h:commandButton styleClass="btn-success" value="Update" action="#{towBean.UpdateTow()}" />
+				<h:commandButton styleClass="btn-danger" action="#{towBean.doCancel()}" value="Cancel" />
 			</h:panelGrid>
 		</h:form>
 

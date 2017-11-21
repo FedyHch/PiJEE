@@ -51,7 +51,6 @@ public class TowBean {
 	}
 	
 	public String deleteTow(Tow tow){
-		
 		towServiceLocal.DeleteTow(tow);
 		return "ListTow?faces-redirect=true";
 	}
