@@ -14,8 +14,8 @@ public class InsuranecPolicy implements Serializable {
 	   
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int PolicyNumber;
-	private int InsuranceClass;
+	private int id;
+	private String InsuranceClass;
 	@OneToOne(mappedBy="insurancePolicy")
 	private Contract contract;
 	
@@ -24,18 +24,20 @@ public class InsuranecPolicy implements Serializable {
 	public InsuranecPolicy() {
 		super();
 	}   
-	public int getPolicyNumber() {
-		return this.PolicyNumber;
+   
+	public int getId() {
+		return id;
 	}
 
-	public void setPolicyNumber(int PolicyNumber) {
-		this.PolicyNumber = PolicyNumber;
-	}   
-	public int getInsuranceClass() {
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getInsuranceClass() {
 		return this.InsuranceClass;
 	}
 
-	public void setInsuranceClass(int InsuranceClass) {
+	public void setInsuranceClass(String InsuranceClass) {
 		this.InsuranceClass = InsuranceClass;
 	}
 	public Contract getContract() {

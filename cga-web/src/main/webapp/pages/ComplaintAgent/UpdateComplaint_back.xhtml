@@ -1,0 +1,36 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="/template/template.xhtml">
+                	
+			<ui:define name="pageTitle">Update Complaint</ui:define>		
+			<ui:define name="pageContent">
+			
+			<h:form>
+			<h:outputLabel value="#{complaintBean.com.complaint_id}"/>
+			<h:panelGrid columns="2" border="1">
+			
+				<h:outputText value="compDate" />
+				
+			<h:outputText value="#{complaintBean.com.complaint_date}" />
+
+
+			<h:outputText value="Description" />
+			<h:outputText value="#{complaintBean.com.description}" />
+
+			<h:outputText value="ComplaintResp" />
+			<h:inputTextarea value="#{complaintBean.com.response}" />
+			
+			
+			
+			
+			
+			
+			
+			</h:panelGrid>
+			<h:commandButton  styleClass="btn" value="Update" action="#{complaintBean.UpdateCompalaint1()}"/>
+			</h:form>
+			
+			</ui:define>
+</ui:composition>

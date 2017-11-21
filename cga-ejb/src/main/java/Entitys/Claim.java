@@ -31,6 +31,8 @@ public class Claim implements Serializable {
 	private InsuranceAgent insuranceAgent;
 	@ManyToMany(mappedBy="listClaim")
 	private List<Vehicule> listVehicule;
+	@OneToOne(mappedBy="claim")
+	private Complaint complaint;
 	
 	private static final long serialVersionUID = 1L;
 

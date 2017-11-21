@@ -1,6 +1,7 @@
 package esprit.cga;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.ejb.EJB;
@@ -91,6 +92,8 @@ public class EventBean {
 		return URL;
 	}
 	
+	
+	
 	public String convertPlace(){
 		String result ="";
 		String place = evt.getEventPlace();
@@ -133,6 +136,7 @@ public class EventBean {
 	
 	public String addEvent(){
 		evt.setLstInsured(new ArrayList<Insured>());
+		
 		ev.addEvent(evt);
 		
 		return "ListEvent?faces-redirect=true";
@@ -171,6 +175,20 @@ public class EventBean {
 		return ev.findEventByTitle(searchName);
 		
 	}
+	
+public List<Event> filterListFront(){
+		
+		List<Event> list = new ArrayList<>();
+		for (Event event : ev.getAllEvents()) {
+			if(event.getEventDate().after(new Date())){
+				list.add(event);
+			}
+		}
+		return list;
+	
+	
+	}
+	
 
 	public Event getEvt() {
 		return evt;

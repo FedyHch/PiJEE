@@ -1,0 +1,41 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="/template/template.xhtml">
+                	
+					
+			<ui:define name="pageTitle">ListComplaint</ui:define>
+			<ui:define name="pageContent">
+			<h:form>
+			<h:dataTable value="#{complaintBean.allCo}" var="c" border="1">
+			<f:facet name="header">All Complaints</f:facet>
+			<h:column>
+			<f:facet name="header">Id</f:facet>
+			<h:outputText value="#{c.complaint_id}" />
+			</h:column>
+			<h:column>
+			<f:facet name="header">date</f:facet>
+			<h:outputText value="#{c.complaint_date}" />
+			</h:column>
+			<h:column>
+			<f:facet name="header">Description</f:facet>
+			<h:outputText value="#{c.description}" />
+			</h:column>
+			<h:column>
+			<f:facet name="header">Response</f:facet>
+			<h:outputText value="#{c.response}" />
+			</h:column>
+			
+			
+			
+			<h:column>
+			<f:facet name="header">Outils</f:facet>
+			<h:commandButton styleClass="btn" value="Answer" action="#{complaintBean.updateComplaintInit_back(c)}" />
+			
+			</h:column>
+			</h:dataTable>
+			</h:form>
+			
+			</ui:define>
+</ui:composition>

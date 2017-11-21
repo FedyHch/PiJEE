@@ -6,6 +6,7 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
+
 import Entitys.Event;
 import Entitys.InsuranceAgent;
 import Entitys.Insured;
@@ -26,13 +27,13 @@ public class EventServiceEjb implements EventServiceEjbRemote,EventServiceEjbLoc
     public EventServiceEjb() {
         // TODO Auto-generated constructor stub
     }
-
+   
 	@Override
 	public void addEvent(Event e) {
 		em.persist(em.merge(e));
 		
 	}
-
+	
 	@Override
 	public void updateEvent(Event e) {
 		em.merge(e);

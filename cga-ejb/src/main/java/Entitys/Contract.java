@@ -20,12 +20,21 @@ public class Contract implements Serializable {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int ContractId;
 	private String Type;
+	@Temporal(TemporalType.DATE)
 	private Date StartDate;
+	@Temporal(TemporalType.DATE)
 	private Date EndDate;
 	
-	@ManyToOne
-	private Insured insuredContract;
 	
+	@OneToOne
+	private Assure assures;
+	
+	public Assure getAssures() {
+		return assures;
+	}
+	public void setAssures(Assure assures) {
+		this.assures = assures;
+	}
 	@ManyToOne
 	private InsuranceCompany insuranceCompany;
 	
@@ -38,19 +47,17 @@ public class Contract implements Serializable {
 	@ManyToOne
 	private InsuranceAgent insuraceAgentContract;
 	
+	
+	
 	private static final long serialVersionUID = 1L;
 	
 	
-	
-	public Insured getInsuredContract() {
-		return insuredContract;
+	public List<Vehicule> getListVehicule() {
+		return listVehicule;
 	}
-	public void setInsuredContract(Insured insuredContract) {
-		this.insuredContract = insuredContract;
+	public void setListVehicule(List<Vehicule> listVehicule) {
+		this.listVehicule = listVehicule;
 	}
-
-	
-
 	public Contract() {
 		super();
 	}   

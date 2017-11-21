@@ -10,29 +10,36 @@ import javax.persistence.*;
  *
  */
 @Entity
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+
 public class User implements Serializable {
 
 	   
 	@Id
 	private String Cin;
+	public String getCin() {
+		return Cin;
+	}
+
+
+
+	public void setCin(String cin) {
+		Cin = cin;
+	}
 	private String Last_name;
 	private String First_name;
+	private String login;
+	private String password;
 	private Date Birth_date;
-	private String Address;
+	private String Phone_number;
 	private String E_mail;
 	private static final long serialVersionUID = 1L;
 
 	public User() {
 		super();
 	}   
-	public String getCin() {
-		return this.Cin;
-	}
+	
+	
 
-	public void setCin(String Cin) {
-		this.Cin = Cin;
-	}   
 	public String getLast_name() {
 		return this.Last_name;
 	}
@@ -54,13 +61,7 @@ public class User implements Serializable {
 	public void setBirth_date(Date Birth_date) {
 		this.Birth_date = Birth_date;
 	}   
-	public String getAddress() {
-		return this.Address;
-	}
-
-	public void setAddress(String Address) {
-		this.Address = Address;
-	}   
+	
 	public String getE_mail() {
 		return this.E_mail;
 	}
@@ -68,5 +69,25 @@ public class User implements Serializable {
 	public void setE_mail(String E_mail) {
 		this.E_mail = E_mail;
 	}
+	public String getPhone_number() {
+		return Phone_number;
+	}
+	public void setPhone_number(String phone_number) {
+		Phone_number = phone_number;
+	}
+	public String getLogin() {
+		return login;
+	}
+	public void setLogin(String login) {
+		this.login = login;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	
+	
    
 }

@@ -1,0 +1,120 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets">
+                <h:form rendered="#{authBean.loggedOut}"> 
+                      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Login</button>
+</h:form>     
+<div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+      
+          <!-- Modal content-->
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                      
+                  </div>
+                  <div class="modal-body">
+                      <div class="container">
+      <div class="row">
+      <div class="col-md-6 col-md-offset-3" style="margin-left: 0px;">
+        <div class="panel panel-login">
+          <div class="panel-heading">
+            <div class="row">
+              <div class="col-xs-6">
+                <a href="#" class="active" id="login-form-link">Login</a>
+              </div>
+              <div class="col-xs-6">
+                <a href="#" id="register-form-link">Register</a>
+              </div>
+            </div>
+            <hr/>
+          </div>
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-lg-12">
+                <h:form id="login-form" action="https://phpoll.com/login/process" method="post" role="form" style="display: block;">
+                  
+                  <div class="form-group">
+                  <h:outputText value="Login" />
+                    <h:inputText value="#{authBean.user.login}" type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username"/>
+                     
+                  </div>
+                  <div class="form-group">
+                  <h:outputText value="Password" />
+                    <h:inputSecret value="#{authBean.user.password}" type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password"/> 
+                  </div>
+                  <div class="form-group text-center">
+                    <input type="checkbox" tabindex="3" class="" name="remember" id="remember"/>
+                    <label for="remember"> Remember Me</label>
+                  </div>
+                  
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-sm-6 col-sm-offset-3">
+                        <h:commandButton action="#{authBean.doLogin}" value="Connect" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login"/>  
+                      <h:message for="login-submit" styleClass="error"/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <div class="text-center">
+                          <a href="https://phpoll.com/recover" tabindex="5" class="forgot-password">Forgot Password?</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </h:form>
+                <h:form id="register-form"   style="display: none;">
+                  <h:panelGrid columns="2">
+                  <h:outputText value="Login" />
+                    <h:inputText value="#{registerBean.insured.login}" class="form-control"/>  
+                  <h:outputText value="Cin" />
+                    <h:inputText value="#{registerBean.insured.cin}" class="form-control"  /> 
+                  
+                  <h:outputText value="Password" />
+                    <h:inputText value="#{registerBean.insured.password}" class="form-control" /> 
+                  <h:outputText value="First name" />
+                    <h:inputText value="#{registerBean.insured.first_name}" class="form-control" /> 
+                  <h:outputText value="Last name" />
+                  <h:inputText value="#{registerBean.insured.last_name}" class="form-control" />
+                  <h:outputText value="Phone number" />
+                  <h:inputText value="#{registerBean.insured.phone_number}"  class="form-control" />
+                  
+                  <h:outputText value="E_mail" />
+                  <h:inputText value="#{registerBean.insured.e_mail}"  class="form-control"/> 
+                  <h:outputText value="Birth date" />
+                  <h:inputText value="#{registerBean.insured.birth_date}" converterMessage="Example: 14/01/2011" class="form-control"> 
+                  <f:convertDateTime pattern="dd/MM/yyyy" />
+                  </h:inputText>
+                  
+                  <h:outputText value="Driving licence" />
+                  <h:inputText value="#{registerBean.insured.driving_licence_id}"  class="form-control" /> 
+                                          
+                  
+                  </h:panelGrid>
+                  
+                 <h:commandButton action="#{registerBean.doSignUp}" value="Register Now" class="form-control btn btn-register"/>
+                      
+                  
+                </h:form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+                  </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+      
+        </div>
+                	
+
+</ui:composition>

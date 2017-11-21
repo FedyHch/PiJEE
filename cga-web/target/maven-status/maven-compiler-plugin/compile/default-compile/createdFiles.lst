@@ -1,4 +1,10 @@
 esprit\cga\TowBean.class
-esprit\cga\EventBean.class
+esprit\cga\ChartView.class
+esprit\cga\RegisterBean.class
+esprit\cga\ContractBean.class
 esprit\cga\InsuranceTowBean.class
+esprit\cga\AssureBean.class
+esprit\cga\ComplaintBean.class
+esprit\cga\EventBean.class
+esprit\cga\AuthBean.class
 esprit\cga\MapBean.class

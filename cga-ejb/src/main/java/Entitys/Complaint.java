@@ -14,14 +14,28 @@ import javax.persistence.*;
 public class Complaint implements Serializable {
 
 	   
+	public String getResponse() {
+		return response;
+	}
+
+
+
+
+
+	public void setResponse(String response) {
+		this.response = response;
+	}
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int Complaint_id;
 	private Date Complaint_date;
 	private String description;
+	private String response ;
 	@ManyToOne
 	private Insured insuredComplaint;
 	
+	@OneToOne
+	private Claim claim;
 	
 	
 	private static final long serialVersionUID = 1L;
@@ -90,4 +104,10 @@ public class Complaint implements Serializable {
 		this.insuredComplaint = insuredComplaint;
 	}
    
+	public Claim getClaimComplaint() {
+		return claim;
+	}
+	public void setClaimComplaint(Claim claim) {
+		this.claim = claim;
+	}
 }

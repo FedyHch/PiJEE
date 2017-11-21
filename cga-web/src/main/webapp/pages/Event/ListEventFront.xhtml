@@ -7,7 +7,7 @@
 			<ui:define name="pageTitle"></ui:define>		
 			<ui:define name="pageContent">
 			<h:form>
-			<h:dataTable styleClass="blueTable" value="#{eventBean.allEv}" var="e" border="0">
+			<h:dataTable styleClass="blueTable" value="#{eventBean.filterListFront()}" var="e" border="0">
 				<f:facet name="header">All Events</f:facet>
 				<h:column>
 					<f:facet name="header">Title</f:facet>

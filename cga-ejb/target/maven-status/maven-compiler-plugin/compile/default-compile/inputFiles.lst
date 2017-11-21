@@ -1,21 +1,37 @@
-C:\Users\Laser\workspace\cga\cga-ejb\src\main\java\Entitys\InsuranceAgent.java
-C:\Users\Laser\workspace\cga\cga-ejb\src\main\java\Services\EventServiceEjbLocal.java
-C:\Users\Laser\workspace\cga\cga-ejb\src\main\java\Entitys\Admin.java
-C:\Users\Laser\workspace\cga\cga-ejb\src\main\java\Entitys\Complaint.java
-C:\Users\Laser\workspace\cga\cga-ejb\src\main\java\Entitys\InsuranecPolicy.java
-C:\Users\Laser\workspace\cga\cga-ejb\src\main\java\Entitys\User.java
-C:\Users\Laser\workspace\cga\cga-ejb\src\main\java\Services\TowServiceEjbRemote.java
-C:\Users\Laser\workspace\cga\cga-ejb\src\main\java\Entitys\Contract.java
-C:\Users\Laser\workspace\cga\cga-ejb\src\main\java\Services\TowServiceEjb.java
-C:\Users\Laser\workspace\cga\cga-ejb\src\main\java\Entitys\Post.java
-C:\Users\Laser\workspace\cga\cga-ejb\src\main\java\Entitys\Insured.java
-C:\Users\Laser\workspace\cga\cga-ejb\src\main\java\Entitys\Event.java
-C:\Users\Laser\workspace\cga\cga-ejb\src\main\java\Entitys\Expert.java
-C:\Users\Laser\workspace\cga\cga-ejb\src\main\java\Entitys\Subject.java
-C:\Users\Laser\workspace\cga\cga-ejb\src\main\java\Services\EventServiceEjbRemote.java
-C:\Users\Laser\workspace\cga\cga-ejb\src\main\java\Services\TowServiceEjbLocal.java
-C:\Users\Laser\workspace\cga\cga-ejb\src\main\java\Entitys\Vehicule.java
-C:\Users\Laser\workspace\cga\cga-ejb\src\main\java\Services\EventServiceEjb.java
-C:\Users\Laser\workspace\cga\cga-ejb\src\main\java\Entitys\Claim.java
-C:\Users\Laser\workspace\cga\cga-ejb\src\main\java\Entitys\InsuranceCompany.java
-C:\Users\Laser\workspace\cga\cga-ejb\src\main\java\Entitys\Tow.java
+D:\4 éme année GL\JEE\cga\cga-ejb\src\main\java\Entitys\InsuranecPolicy.java
+D:\4 éme année GL\JEE\cga\cga-ejb\src\main\java\Entitys\Event.java
+D:\4 éme année GL\JEE\cga\cga-ejb\src\main\java\Services\EventServiceEjbLocal.java
+D:\4 éme année GL\JEE\cga\cga-ejb\src\main\java\Entitys\User.java
+D:\4 éme année GL\JEE\cga\cga-ejb\src\main\java\Services\InsuredServiceRemote.java
+D:\4 éme année GL\JEE\cga\cga-ejb\src\main\java\Entitys\Subject.java
+D:\4 éme année GL\JEE\cga\cga-ejb\src\main\java\Entitys\Admin.java
+D:\4 éme année GL\JEE\cga\cga-ejb\src\main\java\Entitys\Claim.java
+D:\4 éme année GL\JEE\cga\cga-ejb\src\main\java\Services\AssureServiceEjbLocal.java
+D:\4 éme année GL\JEE\cga\cga-ejb\src\main\java\Services\AssureServiceEjbRemote.java
+D:\4 éme année GL\JEE\cga\cga-ejb\src\main\java\Entitys\Complaint.java
+D:\4 éme année GL\JEE\cga\cga-ejb\src\main\java\Entitys\Expert.java
+D:\4 éme année GL\JEE\cga\cga-ejb\src\main\java\Entitys\Vehicule.java
+D:\4 éme année GL\JEE\cga\cga-ejb\src\main\java\Services\ContractServiceEjbRemote.java
+D:\4 éme année GL\JEE\cga\cga-ejb\src\main\java\Services\InsuredService.java
+D:\4 éme année GL\JEE\cga\cga-ejb\src\main\java\Entitys\Assure.java
+D:\4 éme année GL\JEE\cga\cga-ejb\src\main\java\Entitys\Insured.java
+D:\4 éme année GL\JEE\cga\cga-ejb\src\main\java\Services\ComplaintServiceEjbLocal.java
+D:\4 éme année GL\JEE\cga\cga-ejb\src\main\java\Services\ComplaintServiceEjb.java
+D:\4 éme année GL\JEE\cga\cga-ejb\src\main\java\Services\ContractServiceEjb.java
+D:\4 éme année GL\JEE\cga\cga-ejb\src\main\java\Entitys\Post.java
+D:\4 éme année GL\JEE\cga\cga-ejb\src\main\java\Services\ComplaintServiceEjbRemote.java
+D:\4 éme année GL\JEE\cga\cga-ejb\src\main\java\Services\InsuredServiceLocal.java
+D:\4 éme année GL\JEE\cga\cga-ejb\src\main\java\Services\TowServiceEjbLocal.java
+D:\4 éme année GL\JEE\cga\cga-ejb\src\main\java\Services\UserService.java
+D:\4 éme année GL\JEE\cga\cga-ejb\src\main\java\Services\EventServiceEjb.java
+D:\4 éme année GL\JEE\cga\cga-ejb\src\main\java\Services\ContractServiceEjbLocal.java
+D:\4 éme année GL\JEE\cga\cga-ejb\src\main\java\Services\EventServiceEjbRemote.java
+D:\4 éme année GL\JEE\cga\cga-ejb\src\main\java\Services\UserServiceRemote.java
+D:\4 éme année GL\JEE\cga\cga-ejb\src\main\java\Services\TowServiceEjbRemote.java
+D:\4 éme année GL\JEE\cga\cga-ejb\src\main\java\Entitys\Contract.java
+D:\4 éme année GL\JEE\cga\cga-ejb\src\main\java\Entitys\InsuranceAgent.java
+D:\4 éme année GL\JEE\cga\cga-ejb\src\main\java\Services\TowServiceEjb.java
+D:\4 éme année GL\JEE\cga\cga-ejb\src\main\java\Entitys\Tow.java
+D:\4 éme année GL\JEE\cga\cga-ejb\src\main\java\Services\UserServiceLocal.java
+D:\4 éme année GL\JEE\cga\cga-ejb\src\main\java\Entitys\InsuranceCompany.java
+D:\4 éme année GL\JEE\cga\cga-ejb\src\main\java\Services\AssureServiceEjb.java

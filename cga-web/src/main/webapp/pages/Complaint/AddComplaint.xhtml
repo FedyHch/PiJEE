@@ -1,0 +1,41 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="/template/template.xhtml"
+                 xmlns:p="http://java.sun.com/jsf/html">
+                	
+			<ui:define name="pageTitle">Add Complaint</ui:define>		
+			<ui:define name="pageContent">
+			
+			
+			 
+<h:form id="form_AddComplaint">
+			<h:panelGrid columns="3" border="0">
+			
+			
+				<h3>Claim</h3>
+				<p:selectOneMenu styleClass="form-control" value="#{complaintBean.selectedClaimId}">
+					<f:selectItem itemLabel="select .." noSelectionOption="true" />
+					<f:selectItems value="#{complaintBean.allClaims}" var="ass"
+						itemValue="#{ass.claimId}" itemLabel="#{ass.description}" />
+				</p:selectOneMenu>
+				<h:message />
+				
+				<h3>Complaint Description</h3>
+				<h:inputTextarea styleClass="form-control" value="#{complaintBean.com.description}" required="true"/>
+				<h:message />
+				
+				<h3>Complaint Date</h3>
+				<h:inputText id="datemsg" styleClass="form-control" value="#{complaintBean.com.complaint_date}" required="true" converterMessage="Example: 17/12/2010">
+
+					<f:convertDateTime pattern="dd/MM/yyyy" />
+					<f:ajax event="blur" execute="@this" render="msg_date" />
+				</h:inputText>
+				<h:message id="msg_date" for="datemsg" styleClass="error"/>
+			 <h:commandButton styleClass="btn" value="add" action="#{complaintBean.addComplaint()}"/>
+			
+			</h:panelGrid>
+			</h:form>
+			</ui:define>
+</ui:composition>

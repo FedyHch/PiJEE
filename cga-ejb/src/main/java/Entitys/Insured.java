@@ -25,8 +25,7 @@ public class Insured extends User implements Serializable {
 	private List<Subject> listSubject;
 	@OneToMany(mappedBy="insuredComplaint")
 	private List<Complaint> listComplaint;
-	@OneToMany(mappedBy="insuredContract")
-	private List<Contract> contractInsured;
+	
 	
 	@OneToMany(mappedBy="insuredClaim")
 	private List<Claim> listClaim;
@@ -65,12 +64,6 @@ public class Insured extends User implements Serializable {
 	}
 	public void setListComplaint(List<Complaint> listComplaint) {
 		this.listComplaint = listComplaint;
-	}
-	public List<Contract> getContractInsured() {
-		return contractInsured;
-	}
-	public void setContractInsured(List<Contract> contractInsured) {
-		this.contractInsured = contractInsured;
 	}
 	public List<Claim> getListClaim() {
 		return listClaim;

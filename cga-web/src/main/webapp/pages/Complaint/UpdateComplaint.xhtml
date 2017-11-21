@@ -1,0 +1,36 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="/template/template.xhtml">
+                	
+			<ui:define name="pageTitle">Update Complaint</ui:define>		
+			<ui:define name="pageContent">
+			
+			<h:form>
+			<h:outputLabel value="#{complaintBean.com.complaint_id}"/>
+			<h:panelGrid columns="3" border="1">
+			
+				<h:outputText value="compDate" />
+				<h:inputText id="dated" value="#{complaintBean.com.complaint_date}"
+					converterMessage="Example: 17/12/2010">
+					<f:convertDateTime pattern="dd/MM/yyyy" />
+					<f:ajax event="blur" execute="@this" render="msg_StartDate" />
+				</h:inputText>
+			
+<!-- 			<h:outputText value="ComplaintDate" /> -->
+<!-- 			<input type="date" value="#{complaintBean.com.complaint_date}"/> -->
+			<h:outputText value="ComplaintDesc" />
+			<h:inputTextarea value="#{complaintBean.com.description}" />
+			
+			
+			
+			
+			
+			<h:commandButton value="Update" action="#{complaintBean.UpdateCompalaint()}"/>
+			
+			</h:panelGrid>
+			</h:form>
+			
+			</ui:define>
+</ui:composition>
