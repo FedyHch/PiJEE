@@ -22,7 +22,7 @@ public class Tow implements Serializable {
 	private String zone;
 	private Date date_tow;
 	
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne(cascade={CascadeType.PERSIST,CascadeType.MERGE})
 	private InsuranceAgent insuranceAgent;
 	
 	@ManyToOne(cascade = CascadeType.ALL)

@@ -59,6 +59,12 @@ public class TowServiceEjb implements TowServiceEjbRemote,TowServiceEjbLocal {
 	}
 
 	@Override
+	public List<Tow> getTowRequest() {
+		return em.createQuery("select t from Tow t where status=0 ", Tow.class).getResultList();
+
+	}
+	
+	@Override
 	public List<Tow> notReservedTow() {
 		return em.createQuery("select t from Tow t where status=1 and (insured is NULL or insured = '' )",Tow.class).getResultList();
 

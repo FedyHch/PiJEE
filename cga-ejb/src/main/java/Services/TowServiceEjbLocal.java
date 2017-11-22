@@ -20,5 +20,5 @@ public interface TowServiceEjbLocal {
 	public boolean updateTowInsured(Tow t);
 	public void updateTowStatusRefuse(Tow t);
 	public List<Tow> findTowByInsuredAccepted(Insured i);
-
+	public List<Tow> getTowRequest();
 }

@@ -28,7 +28,7 @@ public class InsuranceTowBean {
 	
 	public List<Tow> getAllInsuranceTow(){
 	Insured insured = new Insured();
-	insured.setCin("12345678");
+	insured.setCin("12234455");
 		return towServiceLocal.findTowByInsured(insured);
 	}
 	

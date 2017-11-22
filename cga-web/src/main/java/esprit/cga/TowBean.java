@@ -68,6 +68,11 @@ public class TowBean {
 		
 		return towServiceLocal.getAllTow();
 	}
+	
+	public List<Tow> getTowRequest(){
+		
+		return towServiceLocal.getTowRequest();
+	}
 
 	public TowServiceEjbLocal getTowServiceLocal() {
 		return towServiceLocal;
