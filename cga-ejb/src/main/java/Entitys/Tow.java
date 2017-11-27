@@ -2,16 +2,17 @@ package Entitys;
 
 import java.io.Serializable;
 import java.lang.String;
-import java.util.Date;
+import java.sql.Date;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * Entity implementation class for Entity: Tow
  *
  */
 @Entity
-
+@XmlRootElement
 public class Tow implements Serializable {
 
 	   

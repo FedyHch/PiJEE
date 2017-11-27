@@ -7,6 +7,8 @@ import java.util.List;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 /**
  * Entity implementation class for Entity: Insured
  *
@@ -19,18 +21,24 @@ public class Insured extends User implements Serializable {
 	private String driving_licence_id;
 	
 	@ManyToMany
+	@JsonIgnore
 	private List<Event> listEvent;
 	
 	@OneToMany(mappedBy="insured")
+	@JsonIgnore
 	private List<Subject> listSubject;
+	
 	@OneToMany(mappedBy="insuredComplaint")
+	@JsonIgnore
 	private List<Complaint> listComplaint;
 	
 	
 	@OneToMany(mappedBy="insuredClaim")
+	@JsonIgnore
 	private List<Claim> listClaim;
 	
 	@OneToMany(mappedBy="insured")
+	@JsonIgnore
 	private List<Tow> listTow;
 	
 	private static final long serialVersionUID = 1L;

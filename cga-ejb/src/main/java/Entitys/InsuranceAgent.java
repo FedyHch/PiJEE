@@ -1,18 +1,21 @@
 package Entitys;
 
 import Entitys.User;
+
 import java.io.Serializable;
 import java.lang.String;
 import java.util.List;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlRootElement;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * Entity implementation class for Entity: InsuranceAgent
  *
  */
 @Entity
-
 public class InsuranceAgent extends User implements Serializable {
 
 	
@@ -22,12 +25,15 @@ public class InsuranceAgent extends User implements Serializable {
 	@OneToMany(mappedBy="agentEvent", cascade={CascadeType.PERSIST,CascadeType.MERGE},fetch=FetchType.EAGER)
 	private List<Event> listEvent;
 	
-	@OneToMany(mappedBy="insuraceAgentContract")
+	@OneToMany(mappedBy="insuraceAgentContract",fetch=FetchType.LAZY)
+	@JsonIgnore
 	private List<Contract> listContract;
 	
 	@OneToMany(mappedBy="insuranceAgent")
+	@JsonIgnore
 	private List<Claim> listClaim;
 	@OneToMany(mappedBy="insuranceAgent")
+	@JsonIgnore
 	private List<Tow> listTow;
 	
 	private static final long serialVersionUID = 1L;
