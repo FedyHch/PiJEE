@@ -22,6 +22,7 @@ public class Event implements Serializable {
 	private Date EventDate;
 	private String EventPlace;
 	private String EventTitle;
+	@Column(name="EventDescription")
 	private String EventDescription;
 	private String EventTheme;
 	

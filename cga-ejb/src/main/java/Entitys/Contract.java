@@ -6,13 +6,14 @@ import java.util.Date;
 import java.util.List;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * Entity implementation class for Entity: Contract
  *
  */
 @Entity
-
+@XmlRootElement
 public class Contract implements Serializable {
 
 	   
