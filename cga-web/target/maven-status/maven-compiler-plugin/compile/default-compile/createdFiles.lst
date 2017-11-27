@@ -1,9 +1,7 @@
 esprit\cga\TowBean.class
 esprit\cga\ChartView.class
 esprit\cga\RegisterBean.class
-esprit\cga\resources\jaxrsActivator.class
 esprit\cga\ContractBean.class
-esprit\cga\resources\TowRessources.class
 esprit\cga\InsuranceTowBean.class
 esprit\cga\AssureBean.class
 esprit\cga\ComplaintBean.class

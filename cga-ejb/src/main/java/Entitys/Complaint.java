@@ -4,13 +4,14 @@ import java.io.Serializable;
 import java.lang.String;
 import java.util.Date;
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * Entity implementation class for Entity: Claim
  *
  */
 @Entity
-
+@XmlRootElement
 public class Complaint implements Serializable {
 
 	   

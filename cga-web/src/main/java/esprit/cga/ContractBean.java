@@ -46,7 +46,7 @@ public class ContractBean {
 		contract.setStartDate(d);
 		contract.setInsurancePolicy(police);
 		contract.setType(SelectedType);
-		//contract.setAssures(selectedAsssure);
+		contract.setAssures(selectedAsssure);
 		contract.setInsuranceCompany(selectedAsssurance);
 
 		contractServiceLocal.addContract(contract);
@@ -65,7 +65,7 @@ public class ContractBean {
 		police.setId(SelectedPoliceId);
 		contract.setType(SelectedType);
 		contract.setInsurancePolicy(police);
-		//contract.setAssures(oldAsssure);
+		contract.setAssures(oldAsssure);
 
 		contractServiceLocal.updateContract(contract);
 		return "ListContract?faces-redirect=true";
@@ -80,7 +80,7 @@ public class ContractBean {
 		selectedAsssure.setId(SelectedAssureId);
 		police.setId(SelectedPoliceId);
 		contract.setInsurancePolicy(police);
-		//contract.setAssures(selectedAsssure);
+		contract.setAssures(selectedAsssure);
 		contract.setInsuranceCompany(selectedAsssurance);
 
 		contractServiceLocal.updateContract(contract);
@@ -89,7 +89,7 @@ public class ContractBean {
 
 	public String DetailsContract(Contract c) {
 
-		//this.oldAsssure=c.getAssures();
+		this.oldAsssure=c.getAssures();
 		this.old = c.getInsurancePolicy().getId();
 		System.out.println(this.old);
 		this.contract = c;
